@@ -5,7 +5,7 @@ gem 'spreadsheet'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 gem 'paperclip', '~>2.7'
 gem 'json'
 
@@ -29,5 +29,9 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 group :production, :staging do
   gem "pg"
+end
+group :development, :test do
+  gem 'sqlite3'
+  #gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
 end
 
