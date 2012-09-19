@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
  
   private
   def initialize_nav
+     if Category.all
      @categories=Category.all
+    else
+     @categories=['semi','whell']
+    end
   end
 end
