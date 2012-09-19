@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @category.title %>
+</p>
+  <% for type in @types %>  
+   <%= type.name %>
+ 
+  <% end %>
+fewe
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
