@@ -17,8 +17,8 @@ class ProductsController < ApplicationController
     require 'spreadsheet'
     Spreadsheet.client_encoding = 'UTF-8'
     book=Spreadsheet.open 'app/assets/products/product1.xls'
-    sheet1=book.worksheet 0
-    @data=sheet1.row(0)
+    @sheet=book.worksheet 0
+    
     @product = Product.find(params[:id])
     @type=Type.find(params[:type_id])
     respond_to do |format|

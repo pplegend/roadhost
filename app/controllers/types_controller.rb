@@ -14,13 +14,24 @@ class TypesController < ApplicationController
   # GET /types/1.json
   def show
     @type = Type.find(params[:id])
-
+    @products=Product.find(@type.products)
     respond_to do |format|
       format.html # show.html.erb
+      format.js {render :js=>@products}
       format.json { render :json => @type }
     end
   end
-
+  def showjs
+    expires_now()
+    @type = Type.find(params[:id])
+    @products=Product.find(@type.products)
+     respond_to do |format|
+     format.js {render :content_type => 'text/javascript'}
+    
+    end
+ 
+    
+  end
   # GET /types/new
   # GET /types/new.json
   def new

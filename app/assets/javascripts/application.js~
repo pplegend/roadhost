@@ -11,7 +11,7 @@ function() {
 	var imageSum = $(".image_reel img").size();
         
 	var imageReelWidth = imageWidth * imageSum;
-	alert( imageReelWidth);
+	
 	//Adjust the image reel to its new size
 	$(".image_reel").css({'width' : imageReelWidth});
 
@@ -60,7 +60,39 @@ function() {
         return false; //Prevent browser jump to link anchor
     });    
 
-	
+
+    jQuery('#mycarousel').jcarousel({
+        auto: 3,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+  
+
+
+
+});
+
 	
 });
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+  
+
+
+};
 

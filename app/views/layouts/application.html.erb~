@@ -5,7 +5,9 @@
   <%= stylesheet_link_tag  "application" %>
   <%= stylesheet_link_tag  "bootstrap" %>
   <%= javascript_include_tag "jquery-1.7.2.js" %>
-    <%= javascript_include_tag "bootstrap" %>
+  <%= javascript_include_tag "bootstrap" %>
+  <%= javascript_include_tag "jquery.vticker-min.js" %>
+  <%= javascript_include_tag "jquery.jcarousel.min.js" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "slider" %>
   <%= csrf_meta_tags %>
@@ -13,34 +15,12 @@
 </head>
 <body>
 <div class="container">
-
-
-<div id="header" class="navbar">
-   
-<div class="navbar-inner">
-	<a class="brand" href="/"><img src="/assets/LOGO2.jpg"><span style="color:#0B610B">ROADHOST，ALL THE ROAD RUNS</span></a>
-	<ul class="nav">
-		<li class="active"><a href="/">Home</a></li>
-		<li><a href="#">About us</a></li>
-		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" >Products<b class="caret"></b></a>
-			<ul class="dropdown-menu">
-			  <% @categories.each do |category| %>
-			  <li><%= link_to category.title, category_path(category) %><li>
-			  <% end %>
-			</ul>
-		</li>
-		<li><a href="#">Service & Support</a></li>
-		<li><a href="#">Honors</a></li>
-		<li><a href="#">News</a></li>
-		<li><a href="#">Contact us</a></li>
-	</ul>
-</div>
-</div>
+<%= render "layouts/nav" %>
+<%= render "layouts/slide" %>
 <%= yield %>
-
-
+<%= render 'layouts/footer'%>
 </div>
-<%#= debug(params) if Rails.env.development? %></div>
+<%#= debug(params) if Rails.env.development? %>
 
 </body>
 </html>

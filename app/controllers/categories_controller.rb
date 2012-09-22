@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @products=Product.all
     @category = Category.find(params[:id])
     @types=@category.types
     respond_to do |format|

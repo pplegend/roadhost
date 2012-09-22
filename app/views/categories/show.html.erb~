@@ -1,13 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @category.title %>
-</p>
-  <% for type in @types %>  
-   <%= type.name %>
- 
+<div class="row">
+<div class="type_list span2">
+ <ul class="type_list_ul">
+  <% for @type in @types %>  
+   <li><%= link_to @type.name, showjs_url(@type), :remote => true, :method=>:get %></li>
+    
   <% end %>
-fewe
+</ul>
+
+
+
+</div>
+<div class="type_list_content span8 offset1">
+ <% for product in @products %>
+    <div>
+	<div class="image-box"><%= link_to (image_tag product.image.url(:medium)),"/products/#{product.id}" %></div>
+	<div class="product-detail">
+	  <h4 class="well well-small" style="color:#0B610B;"><%= product.name %></h4>
+	  <p><%= product.description %></p>
+
+	</div>
+	
+    </div>
+ <% end %>
+</div>
+</div>
+<div id="test">
+fewef
+</div>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     @sheet=book.worksheet 0
     
     @product = Product.find(params[:id])
-    @type=Type.find(params[:type_id])
+    @type=Type.find(@product.type)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @product }

@@ -1,5 +1,4 @@
 .container{
- background-color:#BDBDBD;
  -moz-box-shadow:    3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
@@ -23,7 +22,7 @@ margin:0; border:none; outline:none; }
 
 .paging a:hover {font-weight:bold; border:none; outline:none;}
 
-.desc { width:910px; display:none; position:absolute; bottom: -5px;; left: 0; margin-left: 11px; margin-bottom: 10px; z-index:101; background:url(/assets/30w087b.png); color:#fff; font-size:12px; padding:10px; border-radius:0 0 3px 0; -moz-border-radius:0 0 3px 0; -khtml-border-radius:0 0 3px 0; -webkit-border-radius:0 0 3px 0; }
+.desc { width:910px; display:none; position:absolute; bottom: -7px;; left: 0; margin-left: 11px; margin-bottom: 10px; z-index:101; background:url(/assets/30w087b.png); color:#fff; font-size:12px; padding:10px; border-radius:0 0 3px 0; -moz-border-radius:0 0 3px 0; -khtml-border-radius:0 0 3px 0; -webkit-border-radius:0 0 3px 0; }
 
 .desc p{ font-size: 12px; color: #868686; margin-top:5px; }
 
@@ -33,12 +32,13 @@ margin:0; border:none; outline:none; }
 }
 
 #products_list{
- border-top-style:solid;
- border-bottom-style:solid;
-border-top-width:2px;
-border-bottom-width:2px;
-border-color:#0B610B;
-
+-moz-box-shadow:    3px 3px 5px 6px #ccc;
+-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+box-shadow:         3px 3px 5px 6px #ccc;
+position:relative;
+height:200px;
+border-radius:10px;
+margin-left:0px;
 }
 .all-products-btn{
  position:relative;
@@ -80,4 +80,62 @@ margin-left:0px;
 }
 .footer-list li{
 list-style-type: none;
+}
+
+.mycarousel{
+ overflow:hidden;
+ height:auto;
+z-index:50;
+}
+
+#mycarousel li{
+ width:250px;
+}
+#products_list_content{
+background-color:#0B610B;
+margin-left:0px;
+color:white;
+font-size:18px;
+}
+
+.prev-button{
+ position:relative;
+ top:60px;
+ left:50px;
+ overflow:hide;
+}
+
+.next-button{
+ position:relative;
+ top:5px;
+ left:480px;
+ overflow:hidden;
+}
+
+.type_list_ul{
+list-style: none;
+margin: 0px;
+padding: 0px;
+border: none;
+}
+
+.type_list_ul li {
+margin: 20px;
+padding: 0px;
+}
+
+
+.image-box{
+height:190px;
+width:249px;
+border-style:solid;
+border-width:1px;
+border-color:gray;
+float:left;
+}
+.product-detail{
+ 
+}
+.type_list_content{
+
 }
