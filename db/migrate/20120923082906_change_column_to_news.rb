@@ -1,6 +1,6 @@
 class ChangeColumnToNews < ActiveRecord::Migration
   def up
-   change_column :news, :content, :textarea
+   change_column :news, :content, :text
   end
 
   def down
