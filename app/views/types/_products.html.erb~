@@ -1,3 +1,11 @@
 <% for product in @products %>
+   <div>
+	<div class="image-box"><%= link_to (image_tag product.image.url(:medium)),"/products/#{product.id}" %></div>
+	<div class="product-detail">
+	  <h4 class="well well-small" style="color:#0B610B;"><%= product.name %></h4>
+	  <p><%= product.description %>2131</p>
 
+	</div>
+	
+    </div>
 <% end %>

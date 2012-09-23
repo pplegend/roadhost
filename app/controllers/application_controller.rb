@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
    before_filter :initialize_nav
   private
   def initialize_nav
-     if Category.all
-     @categories=Category.all
+     if @categories=Category.all
+        @categories
     else
-     @categories=['semi','whell']
+     @categories=nil
     end
   end
 end

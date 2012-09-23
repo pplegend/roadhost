@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h4><%= @product.name %></h4>
+</p>
+
+<p>
+  <%= @product.description %>
+</p>
+<p>
+  <%= image_tag @product.image.url(:medium) %>
+</p>
+
+
+<table class="table table-striped">
+ <% column= @sheet.column_count %>
+<% 0.upto @sheet.last_row_index do |index| %>
+
+<tr>
+<% (0..column).each do |i| %>
+
+	<td><%= @sheet[index,i] %></td>
+<% end %>
+</tr>
+<% end %>
+</table>
+<%#= @sheet.row(index) %>
+

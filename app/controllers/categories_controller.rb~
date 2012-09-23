@@ -9,10 +9,16 @@ class CategoriesController < ApplicationController
       format.json { render :json => @categories }
     end
   end
+  def text
+    respond_to do |format|
+      format.html # index.html.erb
 
+    end
+   end
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @products=Product.all
     @category = Category.find(params[:id])
     @types=@category.types
     respond_to do |format|

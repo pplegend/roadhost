@@ -4,7 +4,7 @@
 <div class="type_list span2">
  <ul class="type_list_ul">
   <% for @type in @types %>  
-   <li><%= link_to @type.name, showjs_url(@type), :remote => true, :method=>:get,:"data-replace" => '#test' %></li>
+   <li><%= link_to @type.name, showjs_url(@type), :remote => true, :method=>:get,:"data-replace" => '.type_list_content' %></li>
     
   <% end %>
 </ul>
@@ -25,9 +25,6 @@
     </div>
  <% end %>
 </div>
-</div>
-<div id="test">
-fewef
 </div>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

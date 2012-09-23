@@ -1,10 +1,15 @@
 Roadhost::Application.routes.draw do
   
+
+  get 'contacts/contact'
+  resources :news
+  resources :contacts
   resources :types do
    resources :products
   end
   resources :types
   resources :categories
+
   match "products/:id", :to =>'products#show'
   get "home/index"
   root :to=>"home#index"

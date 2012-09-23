@@ -2,15 +2,8 @@
 <html>
 <head>
   <title>Roadhost</title>
-  <%= stylesheet_link_tag  "application" %>
-  <%= stylesheet_link_tag  "bootstrap" %>
-  <%= javascript_include_tag "jquery-1.7.2.js" %>
-  <%= javascript_include_tag "rails" %>
-  <%= javascript_include_tag "bootstrap" %>
-  <%= javascript_include_tag "jquery.vticker-min.js" %>
-  <%= javascript_include_tag "jquery.jcarousel.min.js" %>
-  <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "slider" %>
+  <%= stylesheet_link_tag  "bootstrap","application" %>
+  <%= javascript_include_tag "jquery-1.7.2.js","rails","bootstrap","bootstrap-popover","bootstrap-tooltip","jquery.vticker-min.js","jquery.jcarousel.min.js","slider","application" %>
   <%= csrf_meta_tags %>
 
 </head>
@@ -19,9 +12,11 @@
 <%= render "layouts/nav" %>
 <%= render "layouts/slide" %>
 <%= yield %>
+<%= render 'layouts/honors' %>
 <%= render 'layouts/footer'%>
 </div>
-<%#= debug(params) if Rails.env.development? %>
-
+<div style="position:relative;top:100px;">
+<%= debug(params) if Rails.env.development? %>
+</div>
 </body>
 </html>

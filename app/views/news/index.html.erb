@@ -1,0 +1,9 @@
+<h1>Listing news</h1>
+
+
+<% @news.each do |news| %>
+  <p><%= link_to news.title, news_path(news) %></p>
+
+<% end %>
+</br>
+<%= link_to 'New News', new_news_path %>

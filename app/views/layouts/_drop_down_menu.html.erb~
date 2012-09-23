@@ -1,0 +1,11 @@
+<% @categories.each do |category| %>
+	<li class="dropdown-submenu">
+	<a><%= category.title %></a>
+		<ul class="dropdown-menu">
+			<% category.types.each do |type| %>
+			   <li> <%= link_to type.name,type_path(type)  %></li>
+			<% end %>
+				
+		</ul>
+	<li>
+<% end %>

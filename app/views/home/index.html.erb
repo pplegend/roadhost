@@ -8,10 +8,10 @@
 </div>
 <div id="products_list" class="row">
 
-  <div class="span1">
-   <input class="prev-button" type="image" src="/assets/bg_direction_nav.png" name="image" width="60" height="60">
-   <input class="next-button" type="image" src="/assets/bg_direction_nav.png" name="image" width="60" height="60">
- </div>
+  
+   <input class="prev-button" type="image" src="/assets/prev_direction_nav.png" name="image" width="60" height="60">
+   <input class="next-button" type="image" src="/assets/next_direction_nav.png" name="image" width="60" height="60">
+
 
   <div class="mycarousel span6" >
   
@@ -31,7 +31,17 @@
   </div>
 
 
-<div class="news span3">this is news refre gregr fefef fwef wfefe3 fewf </div>
+<div class="news span3 offset2">
+<% if @news %>
+<ul class="nav">
+
+<% @news.each do |news| %>
+ <li><%= link_to news.title, news_path(news) %></li>
+<% end %>
+
+</ul>
+<% end %>
+ </div>
 </div>
 
 <!--
@@ -42,7 +52,7 @@
   <div class="span3"><img src="/assets/WheelRim-8-25X22-5.jpg"/><span>Wheels</span></div>
   <div class="span3"><img src="/assets/WH16.jpg"/><span>Truck Wheel</span></div>
 </div>
-<div><button class="btn btn-success all-products-btn" type="button">See all the products</button></div>
+<div><button  class="btn btn-success all-products-btn" type="button">See all the products</button></div>
 
 </div>
 -->
@@ -53,7 +63,7 @@
   <div class="span3"><h4>What types of tires does Roadhost offer?</h4><p>Our coverage of tire ( wheel) products include: <ul><li>Semi-steel Tires</li><li>Semi-steel Tires</li><li>All-steel Tires</li><li>Wheels</li><li>Assemblies</li></ul></p></div>
   <div class="span3" style="margin-left:0px;"><h4>Another question?</h4></div>
 </div>
-<div><button class="btn btn-success contact-us-btn" type="button">Contact Us</button></div>
+<div><button onclick="window.location.href='/contacts/new'" class="btn btn-success contact-us-btn" type="button">Contact Us</button></div>
 
 
 </div>

@@ -10,10 +10,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120918091702) do
+ActiveRecord::Schema.define(:version => 20120923124703) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "email"
+    t.string   "tel"
+    t.string   "mobile"
+    t.string   "company"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "contact_via_email", :default => false
+    t.boolean  "contact_via_sms",   :default => false
+  end
+
+  create_table "news", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120918091702) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "type_id"
+    t.string   "file"
   end
 
   create_table "types", :force => true do |t|

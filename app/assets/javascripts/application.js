@@ -1,6 +1,10 @@
+
+
 $(document).ready(
-				  
+			  
 function() {
+
+	$('.popover-with-html').popover();
 
 	//Set Default State of each portfolio piece
 	$(".paging").show();
@@ -84,7 +88,16 @@ function mycarousel_initCallback(carousel)
     carousel.buttonPrev.bind('click', function() {
         carousel.startAuto(0);
     });
+   // next prev button
+	 jQuery('.next-button').bind('click', function() {
+        carousel.next();
+        return false;
+    });
 
+    jQuery('.prev-button').bind('click', function() {
+        carousel.prev();
+        return false;
+    });
     // Pause autoscrolling if the user moves with the cursor over the clip.
     carousel.clip.hover(function() {
         carousel.stopAuto();
@@ -103,4 +116,7 @@ $(function() {
       $($this.data('replace')).html(data);
       $this.trigger('ajax:replaced');
     });
+
+
+
 });

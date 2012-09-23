@@ -1,4 +1,11 @@
-<%= render "product" %>
+<div class="row  types_category">
+  <div class="span2 "><ul class="nav"><%= render "layouts/drop_down_menu" %></ul></div>
+  <div class="span6">
+   <%= render "product" %>
+  </div>
+</div>
+
+
 
 <%= link_to 'Edit', edit_type_product_path(@type,@product) %> |
 <%= link_to 'Back', type_products_path(@type) %>

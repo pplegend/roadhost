@@ -5,7 +5,7 @@ gem 'spreadsheet'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-
+gem 'carrierwave'
 gem 'paperclip', '~>2.7'
 gem 'json'
 

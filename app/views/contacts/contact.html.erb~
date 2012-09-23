@@ -1,0 +1,49 @@
+<div class="row">
+ <div class="span6">
+   <h4>Contact Form</h4>
+   <%= form_for @contact do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @pcontact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :Tel %><br />
+    <%= f.text_field :tel %>
+  </div>
+  <div class="field">
+    <%= f.label :Mobile %><br />
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :Company %><br />
+    <%= f.text_field :company %>
+  </div>
+ <div class="field">
+    
+    <%= f.check_box_tag :contact_via_email %>
+  </div>
+  <div class="field">
+    <%= f.label :Content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+ </div>
+ <div class="span6">
+
+ </div>
+</div>

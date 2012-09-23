@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  tel: MyString
+  mobile: MyString
+  company: MyString
+  content: 
+  contact_via_email: false
+  contact_via_sms: false
+
+two:
+  email: MyString
+  tel: MyString
+  mobile: MyString
+  company: MyString
+  content: 
+  contact_via_email: false
+  contact_via_sms: false

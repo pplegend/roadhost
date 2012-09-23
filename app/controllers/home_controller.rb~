@@ -1,0 +1,10 @@
+class HomeController < ApplicationController
+  def index
+   if @news=News.find(:all, :order=>"id desc", :limit=>5).reverse
+      @news
+    else
+      @news=nil
+   end
+  end
+
+end

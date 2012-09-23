@@ -16,10 +16,13 @@ class ProductsController < ApplicationController
   def show
     require 'spreadsheet'
     Spreadsheet.client_encoding = 'UTF-8'
-    book=Spreadsheet.open 'app/assets/products/product1.xls'
-    @sheet=book.worksheet 0
-    
     @product = Product.find(params[:id])
+    #book=Spreadsheet.open "app/assets/products/#{@product.name}.xls"
+    if FileTest.exists?("public/uploads/product/file/#{@product.id}/#{@product.name}.xls")
+       book=Spreadsheet.open "public/uploads/product/file/#{@product.id}/#{@product.name}.xls"
+       @sheet=book.worksheet 0
+    end
+   
     @type=Type.find(@product.type)
     respond_to do |format|
       format.html # show.html.erb
@@ -80,10 +83,11 @@ class ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product = Product.find(params[:id])
+    @type=Type.find_by_id(params[:type_id])
     @product.destroy
 
     respond_to do |format|
-      format.html { redirect_to products_url }
+      format.html { redirect_to type_products_url(@type) }
       format.json { head :ok }
     end
   end
