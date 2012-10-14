@@ -1,0 +1,19 @@
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs">
+    <li class="active">
+	<a data-toggle="tab" href="#lA">About us</a>
+    </li>
+    <li>
+	<a data-toggle="tab" href="#lB">Honors</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="lA" class="tab-pane active">
+    Welcome to Roadhost Industry Co.Ltd
+Roadhost is top ten biggest tires and wheels exporting company located in Qingdao. We manufacture, design, exporting all kinds of tires (wheels) and other accessories for a wide variety of applications. Roadhost is devoted to be an irreplaceable supplier of tires (wheels) that meet and exceed the needs of customers.
+   </div>
+    <div id="lB" class="tab-pane ">
+     <%= render "layout/honors" %>
+   </div>
+  </div>
+</div>

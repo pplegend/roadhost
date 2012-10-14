@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @products=Product.all
+    
     @category = Category.find(params[:id])
     @types=@category.types
     respond_to do |format|
@@ -77,7 +77,7 @@ class CategoriesController < ApplicationController
     @category.destroy
 
     respond_to do |format|
-      format.html { redirect_to categories_url }
+      format.html { redirect_to admin_url }
       format.json { head :ok }
     end
   end

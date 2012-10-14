@@ -6,5 +6,9 @@ class HomeController < ApplicationController
       @news=nil
    end
   end
-
+  def admin
+   
+  end
+  def about
+  end
 end

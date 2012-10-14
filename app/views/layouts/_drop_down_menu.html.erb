@@ -1,4 +1,7 @@
 <% @categories.each do |category| %>
+      <% if category.types.empty? %>
+        <li> <%= link_to category.title, category_path(category) %></li>
+      <% else %>
 	<li class="dropdown-submenu">
 	<a><%= category.title %></a>
 		<ul class="dropdown-menu">
@@ -8,5 +11,7 @@
 				
 		</ul>
 	<li>
+      <% end %>
+	
 <% end %>
 

@@ -1,8 +1,10 @@
+/*--Run bundle exec rake assets:precompile on your local code--*/
+
 .container{
  -moz-box-shadow:    3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
- height:1400px;
+ height:1000px;
 }
 /*--Window/Masking Styles--*/
 .window { overflow:hidden; position:relative; width:960px; height:300px;  }
@@ -127,14 +129,17 @@ padding: 0px;
 
 
 .image-box{
-height:190px;
+height:150px;
 width:249px;
 border-style:solid;
 border-width:1px;
 border-color:gray;
-float:left;
-}
 
+}
+.image-box img{
+ width:240px;
+height:170px;
+}
 #honors{
  position:relative;
  top:30px;

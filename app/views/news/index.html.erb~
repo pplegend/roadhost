@@ -2,7 +2,7 @@
 
 
 <% @news.each do |news| %>
-  <%= link_to news.title, news_path(news) %>
+  <p><%= link_to news.title, news_path(news) %></p>
 
 <% end %>
 </br>

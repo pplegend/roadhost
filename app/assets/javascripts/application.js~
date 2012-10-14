@@ -66,7 +66,7 @@ function() {
 
 
     jQuery('#mycarousel').jcarousel({
-        auto: 3,
+        auto: 5,
         wrap: 'last',
         initCallback: mycarousel_initCallback
   
@@ -88,7 +88,16 @@ function mycarousel_initCallback(carousel)
     carousel.buttonPrev.bind('click', function() {
         carousel.startAuto(0);
     });
+   // next prev button
+	 jQuery('.next-button').bind('click', function() {
+        carousel.next();
+        return false;
+    });
 
+    jQuery('.prev-button').bind('click', function() {
+        carousel.prev();
+        return false;
+    });
     // Pause autoscrolling if the user moves with the cursor over the clip.
     carousel.clip.hover(function() {
         carousel.stopAuto();

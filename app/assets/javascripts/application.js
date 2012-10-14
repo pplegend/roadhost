@@ -66,8 +66,9 @@ function() {
 
 
     jQuery('#mycarousel').jcarousel({
-        auto: 3,
+        auto: 5,
         wrap: 'last',
+	scroll: 1,
         initCallback: mycarousel_initCallback
   
 

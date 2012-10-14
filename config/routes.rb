@@ -4,16 +4,19 @@ Roadhost::Application.routes.draw do
   get 'contacts/contact'
   resources :news
   resources :contacts
+  match "admin", :to=>'home#admin', :as=>"admin"
+  match "about/us", :to=>'home#about', :as=>"about"
   resources :types do
    resources :products
   end
+
   resources :types
   resources :categories
-
+  
   match "products/:id", :to =>'products#show'
   get "home/index"
   root :to=>"home#index"
-  match "types/showjs/:id", :to=>'types#showjs', :as=>"showjs", :via=>'get'
+  #match "types/showjs/:id", :to=>'types#showjs', :as=>"showjs", :via=>'get'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
