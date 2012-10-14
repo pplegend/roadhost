@@ -12,7 +12,7 @@
 		</li>
 		<li><a href="#">Service & Support</a></li>
 		<li class="<%= 'active' if params[:controller] == 'news' %>"><a href="/news">News</a></li>
-		<li><a href="#">Contact us</a></li>
+		<li class="<%= 'active' if params[:controller] == 'contacts' %>"><a href="/contacts/new">Contact us</a></li>
 	</ul>
 </div>
 </div>
