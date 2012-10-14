@@ -4,7 +4,7 @@
 
 <div id="products_list_content" class="row">
  <div class="span2 offset1">Prouducts:</div>
- <div class="span2 offset5">News:</div>
+ <div class="span2 offset5">About us:</div>
 </div>
 <div id="products_list" class="row">
 
@@ -16,54 +16,18 @@
   <div class="mycarousel span6" >
   
    <ul id="mycarousel" >
-    <li><img src="/assets/SN293C.jpg" alt="" /></li>
-    <li><img src="/assets/20108318163685781huang.jpg"  alt="" /></li>
-    <li><img src="/assets/WheelRim-8-25X22-5.jpg" alt="" /></li>
-    <li><img src="/assets/WH16.jpg"  alt="" /></li>
-    <li><img src="/assets/20108318163685781huang.jpg" alt="" /></li>
-    <li><img src="/assets/WheelRim-8-25X22-5.jpg"  alt="" /></li>
-    
-    <li><img src="/assets/WheelRim-8-25X22-5.jpg"  alt="" /></li>
-    <li><img src="/assets/SN293C.jpg"  alt="" /></li>
-    <li><img src="/assets/WH16.jpg"  alt="" /></li>
+    <li><img src="/assets/initpintu.jpg"/><p>PASSENGER CAR & UHP TIRES</p></li>
+    <li><img src="/assets/initpintu2.jpg"/><p>BUS & TRUCK RAIDAL TIRES</p></li>
+    <li><img src="/assets/initpintu3.jpg"/><p>WHEELS & RIMS</p></li>
   </ul>
 
   </div>
 
 
-<div class="news span3 offset2">
-<% if @news %>
-<ul class="nav">
+<div class="news span4 offset1">
+<h4>Welcome to Roadhost Industry Co.Ltd</h4>
 
-<% @news.each do |news| %>
- <li><%= link_to news.title, news_path(news) %></li>
-<% end %>
-
-</ul>
-<% end %>
- </div>
+Roadhost is top ten biggest tires and wheels exporting company located in Qingdao. We manufacture, design, exporting all kinds of tires (wheels) and other accessories for a wide variety of applications. Roadhost is devoted to be an irreplaceable supplier of tires (wheels) that meet and exceed the needs of customers.
+</div>
 </div>
 
-<!--
-<div id="products_list">
- <div id="semi-steel" class="row">
-  <div class="span3"><img src="/assets/SN293C.jpg"/><span>Tires</span></div>
-  <div class="span3"><img src="/assets/20108318163685781huang.jpg"/><span> ATV</span></div>
-  <div class="span3"><img src="/assets/WheelRim-8-25X22-5.jpg"/><span>Wheels</span></div>
-  <div class="span3"><img src="/assets/WH16.jpg"/><span>Truck Wheel</span></div>
-</div>
-<div><button  class="btn btn-success all-products-btn" type="button">See all the products</button></div>
-
-</div>
--->
-
-<div id="content" class="row">
-  <div class="span3"><h4>Why choose Roadhost?</h4><p>Roadhost has been proven to be a reliable supplier and leader in customer service. Thanks for all the supports from our loyal customers in past years. Roadhost would be always striving to offer best products and improve our service to satisfy more customers. </p></div>
-  <div class="span3"><h4>How does Roadhost supply these tires?</h4><p>Greenball develops, manufactures and imports a variety of quality tires. Our vendors are carefully selected to ensure the quality of tires imported are able to meet the market's needs.  Dedicated to ongoing research and development, Greenball continues to be an industry leader in new and innovative tire designs.  The success of our own private brands such as the TOW-MASTER, POWERMASTER, and DIRT DEVIL speak for themselves.</p></div>
-  <div class="span3"><h4>What types of tires does Roadhost offer?</h4><p>Our coverage of tire ( wheel) products include: <ul><li>Semi-steel Tires</li><li>Semi-steel Tires</li><li>All-steel Tires</li><li>Wheels</li><li>Assemblies</li></ul></p></div>
-  <div class="span3" style="margin-left:0px;"><h4>Another question?</h4></div>
-</div>
-<div><button onclick="window.location.href='/contacts/new'" class="btn btn-success contact-us-btn" type="button">Contact Us</button></div>
-
-
-</div>
