@@ -10,9 +10,8 @@
 <body>
 <div class="container">
 <%= render "layouts/nav" %>
-<%= render "layouts/slide" %>
+
 <%= yield %>
-<%= render 'layouts/honors' %>
 <%= render 'layouts/footer'%>
 </div>
 <div style="position:relative;top:100px;">

@@ -1,0 +1,19 @@
+<div class="mainPartA MT">
+<div class="barA">
+ <h5>Products category</h5>
+</div>
+<div class="productCate conA">
+<% @categories.each do |category| %>
+  <dl><dt><%= link_to category.title, category_path(category) %> </dt>
+  <dd><% if category.types.empty? %>
+        <%= link_to category.title, category_path(category) %>
+      <% else %>
+        <% category.types.each do |type| %>
+	  <%= link_to type.name,type_path(type)  %> | 
+	<% end %>
+       <% end %>
+  </dd>
+ </dl>
+<% end %>
+</div>
+</div>
