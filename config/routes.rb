@@ -14,6 +14,7 @@ Roadhost::Application.routes.draw do
   resources :categories
   
   match "products/:id", :to =>'products#show'
+  
   get "home/index"
   root :to=>"home#index"
   #match "types/showjs/:id", :to=>'types#showjs', :as=>"showjs", :via=>'get'

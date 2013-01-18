@@ -1,17 +1,26 @@
+<%= render "layouts/breadcrumb" %>
 <ul class="breadcrumb">
-  <li><a href="#">Home</a> <span class="divider">/</span></li>
-  <li class="active">Library</a> <span class="divider">/</span></li>
+  <li><%= link_to "Products",categories_path %> <span class="divider">/</span></li>
+  <li><%= link_to @product.type.name,type_path(@product.type) %> <span class="divider">/</span></li>
+  <li class="active"><%=  @product.name %> <span class="divider">/</span></li>
+
 </ul>
 
-<div class="row  types_category">
-  <div class="span2 "><ul class="nav"><%= render "layouts/drop_down_menu" %></ul></div>
-  <div class="span6">
-   <%= render "product" %>
-  </div>
-</div>
+<% if @sheet %>
+<table class="table table-striped table-hover">
+ <% column= @sheet.column_count %>
+<% 0.upto @sheet.last_row_index do |index| %>
+
+<tr>
+<% (0..column).each do |i| %>
+
+	<td><%= @sheet[index,i] %></td>
+<% end %>
+</tr>
+<% end %>
+</table>
+<% end %>
+<%#= @sheet.row(index) %>
 
 
 
-
-<%= link_to 'Edit', edit_type_product_path(@type,@product) %> |
-<%= link_to 'Back', type_products_path(@type) %>

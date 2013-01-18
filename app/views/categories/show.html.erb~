@@ -1,28 +1,25 @@
 <p id="notice"><%= notice %></p>
+<%= render "layouts/breadcrumb" %>
+<div class="mainPartA MT">
 
-<div class="row">
-<div class="type_list span2">
- <table>
-  <% for @type in @types %>  
-   <tr>
-    <td>
-    <%= link_to @type.name, type_path(@type) %>
-    </td>
-    <td>
-    <%= link_to "Edit", edit_type_path(@type) %>
-    </td>
-    <td>
-    <%= link_to "Delete", @type, :confirm => 'Are you sure?', :method => :delete %></td>
-    </td>
-   </tr>
+ <ul class="breadcrumb">
+  <li><%= link_to "Products",categories_path %> <span class="divider">/</span></li>
+  <li class="active"><%= link_to @category.title,category_path(@category) %> <span class="divider">/</span></li>
+
+ </ul>
+
+ <div class="productCate conA">
+  <% @types.each do |type| %>
+       <dt style="padding-left:33px;width:150px;margin:10px;"> <%= link_to type.name, type_path(type) %> </dt>
+
+ <% end %>
+ </div>
+</div>
+
+<div class="productCate conA">
+ 
+ <%= render :partial=>'products/product', :collection=>@products %>
     
-  <% end %>
-</table>
-
-
-
 </div>
 
-</div>
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+

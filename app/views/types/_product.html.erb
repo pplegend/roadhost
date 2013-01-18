@@ -1,0 +1,12 @@
+<dl>
+	<dt>
+	  <%= image_tag product.image.url(:thumb) %>
+	</dt>
+	<dd>
+	<p><b><%= link_to product.name, type_product_path(@type,product) %></b></p>
+	<%= product.description %>
+	</dd>
+	<span class="view_details" >
+	  <%= link_to "View details",type_product_path(@type,product) %>
+	</span>
+	</dl>

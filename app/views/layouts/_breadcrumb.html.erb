@@ -1,0 +1,7 @@
+<ul class="breadcrumb">
+<% @categories.each do |category| %>
+  <li><%= link_to category.title, category_path(category) %><span class="divider">/</span></li>
+
+<% end %>
+
+</ul>

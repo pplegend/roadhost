@@ -16,6 +16,7 @@ class CategoriesController < ApplicationController
     
     @category = Category.find(params[:id])
     @types=@category.types
+    @products=Product.find_all_by_type_id(@types)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @category }

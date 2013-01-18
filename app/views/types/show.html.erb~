@@ -1,10 +1,5 @@
 <p id="notice"><%= notice %></p>
-<ul class="breadcrumb">
-<% @categories.each do |category| %>
-  <li><%= link_to category.title, category_path(category) %><span class="divider">/</span></li>
-
-<% end %>
-</ul>
+<%= render breadcrumb %>
 <ul class="breadcrumb">
   <li><%= link_to "Products",categories_path %> <span class="divider">/</span></li>
   <li><%= link_to @type.category.title,category_path(@type.category) %> <span class="divider">/</span></li>
@@ -15,25 +10,8 @@
 
 <div class="productCate conA">
      <% if products=@type.products %>
-	<% products.each do |product| %>
-        <dl>
-	<dt>
-	  <%= image_tag product.image.url(:thumb) %>
-	</dt>
-	<dd>
-	<p><b><%= link_to product.name, type_product_path(@type,product) %></b></p>
-	<%= product.description %>
-	</dd>
-	<span class="view_details" >
-	  <%= link_to "View details",type_product_path(@type,product) %>
-	</span>
-	</dl>
-	<% end %>
-	<% else %>
-       
-        <% end %>
-	
-
+	<%= render products %>
+     <% end %>
 </div>
 
 
